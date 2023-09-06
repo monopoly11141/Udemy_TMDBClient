@@ -5,6 +5,6 @@ import com.example.udemy_tmdbclient.data.model.tvshow.TvShow
 
 class UpdateTvShowsUseCase(private val tvShowRepository: TvShowRepository) {
 
-    suspend fun execute() : List<TvShow>? = tvShowRepository.updateTvShows()
+    suspend fun execute(): List<TvShow>? = tvShowRepository.updateTvShows()
 
 }

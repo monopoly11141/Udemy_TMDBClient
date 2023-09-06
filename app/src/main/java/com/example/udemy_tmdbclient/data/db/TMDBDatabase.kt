@@ -13,8 +13,8 @@ import com.example.udemy_tmdbclient.data.model.tvshow.TvShow
 )
 abstract class TMDBDatabase : RoomDatabase() {
 
-    abstract fun movieDao() : MovieDao
-    abstract fun artistDao() : ArtistDao
-    abstract fun tvShowDao() : TvShowDao
+    abstract fun movieDao(): MovieDao
+    abstract fun artistDao(): ArtistDao
+    abstract fun tvShowDao(): TvShowDao
 
 }

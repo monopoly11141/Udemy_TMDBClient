@@ -5,6 +5,6 @@ import com.example.udemy_tmdbclient.data.model.artist.Artist
 
 class GetArtistsUseCase(private val artistRepository: ArtistRepository) {
 
-    suspend fun execute() : List<Artist>? = artistRepository.getArtists()
+    suspend fun execute(): List<Artist>? = artistRepository.getArtists()
 
 }

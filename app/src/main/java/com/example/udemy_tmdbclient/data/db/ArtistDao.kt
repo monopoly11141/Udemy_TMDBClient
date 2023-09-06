@@ -2,7 +2,6 @@ package com.example.udemy_tmdbclient.data.db
 
 import androidx.room.*
 import com.example.udemy_tmdbclient.data.model.artist.Artist
-import com.example.udemy_tmdbclient.data.model.movie.Movie
 
 @Dao
 interface ArtistDao {

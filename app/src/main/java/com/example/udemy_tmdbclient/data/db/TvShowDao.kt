@@ -1,7 +1,6 @@
 package com.example.udemy_tmdbclient.data.db
 
 import androidx.room.*
-import com.example.udemy_tmdbclient.data.model.movie.Movie
 import com.example.udemy_tmdbclient.data.model.tvshow.TvShow
 
 @Dao
@@ -14,7 +13,7 @@ interface TvShowDao {
     suspend fun deleteAllTvShows()
 
     @Query("SELECT * FROM popular_tv_shows")
-    suspend fun getTvShows() : List<TvShow>
+    suspend fun getTvShows(): List<TvShow>
 
 
 }
