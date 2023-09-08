@@ -47,7 +47,7 @@ class TvShowRepositoryImpl(
         lateinit var tvShowList: List<TvShow>
 
         try {
-            val tvShowList = tvShowLocalDataSource.getTvShowsFromDB()
+            tvShowList = tvShowLocalDataSource.getTvShowsFromDB()
 
         } catch (e: Exception) {
             Log.i("MYTAG", e.message.toString())
@@ -68,7 +68,7 @@ class TvShowRepositoryImpl(
         lateinit var tvShowList: List<TvShow>
 
         try {
-            val movieList = tvShowCacheDataSource.getTvShowsFromCache()
+            tvShowList = tvShowCacheDataSource.getTvShowsFromCache()
 
         } catch (e: Exception) {
             Log.i("MYTAG", e.message.toString())

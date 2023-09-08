@@ -46,7 +46,7 @@ class ArtistRepositoryImpl(
         lateinit var artistList: List<Artist>
 
         try {
-            val artistList = artistLocalDataSource.getArtistsFromDB()
+            artistList = artistLocalDataSource.getArtistsFromDB()
 
         } catch (e: Exception) {
             Log.i("MYTAG", e.message.toString())
@@ -67,7 +67,7 @@ class ArtistRepositoryImpl(
         lateinit var artistList: List<Artist>
 
         try {
-            val artistList = artistCacheDataSource.getArtistsFromCache()
+            artistList = artistCacheDataSource.getArtistsFromCache()
 
         } catch (e: Exception) {
             Log.i("MYTAG", e.message.toString())

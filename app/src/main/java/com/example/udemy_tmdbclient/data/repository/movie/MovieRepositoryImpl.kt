@@ -32,6 +32,7 @@ class MovieRepositoryImpl(
         try {
             val response = movieRemoteDataSource.getMovies()
             val body = response.body()
+            Log.d("MYTAG", body?.movies.toString())
             body?.let {
                 movieList = body.movies
             }
@@ -46,7 +47,7 @@ class MovieRepositoryImpl(
         lateinit var movieList: List<Movie>
 
         try {
-            val movieList = movieLocalDataSource.getMoviesFromDB()
+            movieList = movieLocalDataSource.getMoviesFromDB()
 
         } catch (e: Exception) {
             Log.i("MYTAG", e.message.toString())
@@ -67,7 +68,7 @@ class MovieRepositoryImpl(
         lateinit var movieList: List<Movie>
 
         try {
-            val movieList = movieCacheDataSource.getMoviesFromCache()
+            movieList = movieCacheDataSource.getMoviesFromCache()
 
         } catch (e: Exception) {
             Log.i("MYTAG", e.message.toString())
